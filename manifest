@@ -1,0 +1,9 @@
+name="jenkins-0.3.0"
+organization="SmartOS"
+brand="Instance"
+base="base-64-lts-19.4.0"
+JENKINS_VERSION='2.204.1'
+description="A preconfigured jenkins 2.204.1 instance based on base-64-lts 19.4.0"
+homepage="https://github.com/nonepassby/mi-jenkins"
+users="root admin"
+manifest_uuid="acaf21b4-3f70-11ea-ae41-db5b268c1cbb"

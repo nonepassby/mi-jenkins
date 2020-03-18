@@ -1,0 +1,31 @@
+#!/usr/bin/bash
+
+PATH=/opt/local/gnu/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/usr/sbin
+JENKINS_VERSION='2.204'
+
+# Exit if any commands fail
+set -o errexit
+
+
+# Configuring image specific packages
+echo "* Configuring image specific packages.";
+
+# Create user for jenkins
+echo "* create user for jenkins"
+/usr/sbin/groupadd -g 10001 jenkins
+/usr/sbin/useradd -u 10001 -g jenkins -d /home/jenkins -m -s /usr/bin/bash jenkins
+
+# Download and enable jenkins
+echo "* download and enable jenkins"
+cd /root/
+/usr/bin/wget --no-check-certificate -c -O /opt/jenkins.war https://mirrors.tuna.tsinghua.edu.cn/jenkins/war/${JENKINS_VERSION}/jenkins.war
+svccfg import /root/jenkins.xml
+
+# Clean up
+echo "* Cleaning up."
+rm -rf /root/*
+
+
+# Prepare image for provisioning
+gsed -i '/metadata\.sock/d' /opt/local/bin/sm-prepare-image
+sm-prepare-image -y
