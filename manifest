@@ -6,4 +6,4 @@ JENKINS_VERSION='2.226'
 description="A preconfigured jenkins 2.226 instance based on base-64-lts 19.4.0"
 homepage="https://github.com/nonepassby/mi-jenkins"
 users="root admin"
-manifest_uuid="acaf21b4-3f70-11ea-ae41-db5b268c1cbb"
+manifest_uuid="f8fd4c00-6980-11ea-bbac-5398a9d44f52"
