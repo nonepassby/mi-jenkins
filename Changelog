@@ -1,6 +1,7 @@
 2.226: Update Jenkins version Java Version
 * update base image: minimal-64-lts 19.4.0
 * change name: jenkins-minimal
+* remove subversion-base, cvs
 
 2.226: Update Jenkins version Java Version
 * update base image: base-64-lts 19.4.0
