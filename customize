@@ -28,5 +28,5 @@ rm -rf /root/*
 
 # Prepare image for provisioning
 # only base need, minimal don't need
-# sed -i '/metadata\.sock/d' /opt/local/bin/sm-prepare-image
+# gsed -i '/metadata\.sock/d' /opt/local/bin/sm-prepare-image
 sm-prepare-image -y
