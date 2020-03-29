@@ -1,0 +1,30 @@
+{
+  "brand": "joyent",
+  "image_uuid": "4b575236-7113-11ea-ac45-cff954db9009",
+  "autoboot": true,
+  "alias": "jenkins",
+  "hostname": "jenkins",
+  "dns_domain": "jenkins",
+  "resolvers": [
+    "8.8.8.8",
+    "8.8.4.4"
+  ],
+  "max_physical_memory": 1024,
+  "nics": [
+    {
+      "nic_tag": "admin",
+      "ips": ["dhcp"],
+      "gateway": "192.168.1.1",
+      "primary": true
+    }
+  ],
+  "filesystems": [
+    {
+      "type": "lofs",
+      "source": "/zones/lofs/jenkins/jenkins_home",
+      "target": "/home/jenkins"
+    }
+  ],
+  "customer_metadata": {
+  }
+}
